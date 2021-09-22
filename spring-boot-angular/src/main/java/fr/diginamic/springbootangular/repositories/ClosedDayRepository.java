@@ -11,3 +11,11 @@ public interface ClosedDayRepository extends JpaRepository<ClosedDay, Long> {
     List<ClosedDay> findByCategory(ClosedDay.Category category);
     Optional<ClosedDay> findByDate(LocalDate date);
 }
+
+
+
+
+
+
+
+

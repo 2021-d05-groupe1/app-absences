@@ -38,9 +38,8 @@ export class ClosedDaysComponent implements OnInit {
     this.as.getDatas().subscribe((res:ClosedDay[])=> {
       this.holidays = res;
       res.forEach(element => {
-        //console.log(element);
+        console.log(element);
       });
-      console.log(this.holidays.length);
     });
 
 

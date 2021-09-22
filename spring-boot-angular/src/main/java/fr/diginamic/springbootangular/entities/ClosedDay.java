@@ -6,6 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
 
+/**
+ * Classe ClosedDay with properties
+ * @param id
+ * @param date
+ * @param category
+ * @param jour
+ * @param commentaire
+ */
 @Entity
 public class ClosedDay {
     @Id
@@ -21,8 +29,15 @@ public class ClosedDay {
 
     private String commentaire;
 
+    /**
+     * constructor without paramaters
+     */
     public ClosedDay() {
     }
+
+    /**
+     * Getters et Setters
+     */
 
     public ClosedDay(LocalDate date, Category category) {
         this.date = date;

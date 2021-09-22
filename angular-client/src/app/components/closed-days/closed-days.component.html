@@ -1,8 +1,5 @@
 <div class="jumbotron  p-4 m-3 text-center">
-
-
     <h3 class="text-center m-3 p-2">Visualiser jour férié ou RTT employeur</h3>
-
     <div class="text-center m-3 p-2">
         Année
         <input type="number" max="2200" min="1970" class="m-3 text-center" value="2021" />
@@ -15,7 +12,6 @@
             <th>Jour</th>
             <th>Commentaire</th>
             <th *ngIf="isUserAdmin()">Actions</th>
-
         </thead>
         <tbody class="text-center">
             <tr *ngFor="let elt of holidays">
@@ -23,12 +19,9 @@
                 <td>{{elt.category}}</td>
                 <td>{{elt.jour}}</td>
                 <td>{{elt.commentaire}}</td>
-                <div *ngIf="isUserAdmin()" class="text-center p-2">
+                <div *ngIf="isUserAdmin()" class="text-center  d-inline-block p-2">
                     <td>
-                        <a [routerLink]="['add']" class="btn btn-primary" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M13.25 2.5H2.75a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V2.75a.25.25 0 00-.25-.25zM2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 15H2.75A1.75 1.75 0 011 13.25V2.75C1 1.784 1.784 1 2.75 1zM8 4a.75.75 0 01.75.75v2.5h2.5a.75.75 0 010 1.5h-2.5v2.5a.75.75 0 01-1.5 0v-2.5h-2.5a.75.75 0 010-1.5h2.5v-2.5A.75.75 0 018 4z"></path></svg></a>
-                    </td>
-                    <td>
-                        <a [routerLink]="['edit', elt.id]" class="btn btn-warning" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                        <a [routerLink]="['edit', elt.id]" class="btn btn-warning m-2" routerLinkActive="active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
                             <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
                           </svg></a>
                     </td>
@@ -37,9 +30,13 @@
                         <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                       </svg></a></td>
                 </div>
-
             </tr>
-
         </tbody>
     </table>
+    <div *ngIf="isUserAdmin()" class="text-center p-2 d-inline-block float-left">
+        <td>
+            <a [routerLink]="['add']" class="btn btn-primary p-1 m-1" routerLinkActive="active">  Ajouter JF ou RTT Employeur  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M13.25 2.5H2.75a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V2.75a.25.25 0 00-.25-.25zM2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 15H2.75A1.75 1.75 0 011 13.25V2.75C1 1.784 1.784 1 2.75 1zM8 4a.75.75 0 01.75.75v2.5h2.5a.75.75 0 010 1.5h-2.5v2.5a.75.75 0 01-1.5 0v-2.5h-2.5a.75.75 0 010-1.5h2.5v-2.5A.75.75 0 018 4z"></path></svg></a>
+
+        </td>
+    </div>
 </div>
